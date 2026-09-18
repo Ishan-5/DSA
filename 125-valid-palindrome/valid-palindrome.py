@@ -1,7 +1,7 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         import re
-        clean_s = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+        clean_s = "".join(char.lower() for char in s if char.isalnum())
         reverse_s = clean_s[::-1]
         return clean_s==reverse_s
 

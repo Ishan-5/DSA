@@ -1,8 +1,5 @@
 class Solution:
     def totalMoney(self, n: int) -> int:
-        weeks = n//7
-        rem = n%7
-        full_weeks_sum = weeks * 28 + 7 * (weeks * (weeks - 1)) // 2
-        leftover_sum = rem * (weeks + 1) + (rem * (rem - 1)) // 2
-        
-        return full_weeks_sum + leftover_sum
+        a = n // 7
+        b = n % 7
+        return 28*a + 7*a*(a-1)//2 + b*(a+1) + b*(b-1)//2

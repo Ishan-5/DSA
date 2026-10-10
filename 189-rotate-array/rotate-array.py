@@ -12,11 +12,7 @@ class Solution:
         from collections import deque
 
         d = deque(nums)
-        
-        
         d.rotate(k)
-        
-        
         nums[:] = list(d)
 
 

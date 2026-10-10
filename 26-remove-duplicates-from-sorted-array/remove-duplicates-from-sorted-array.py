@@ -9,14 +9,23 @@ class Solution:
         #     nums[j]=k
         #     j+=1
         # return j
-        if not nums :
-            return 0
+        # if not nums :
+        #     return 0
+        # n = len(nums)
+        # i=0
+        # for j in range(1, n):
+        #     if nums[i] != nums[j]:  
+        #         i += 1              
+        #         nums[i] = nums[j]   
+                
+        # return i + 1 
         n = len(nums)
         i=0
-        for j in range(1, n):
-            if nums[i] != nums[j]:  
-                i += 1              
-                nums[i] = nums[j]   
-                
-        return i + 1 
+        j=i+1
+        while j<n:
+            if nums[i]!= nums[j]:
+                i+=1
+                nums[i],nums[j]=nums[j],nums[i]
+            j+=1
+        return i+1
 

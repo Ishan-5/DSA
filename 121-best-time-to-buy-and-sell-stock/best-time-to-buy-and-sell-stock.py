@@ -8,12 +8,21 @@ class Solution:
         #             p = prices[j]-prices[i]
         #             max_profit=max(max_profit,p)
         # return max_profit
+        #2nd approach
+        # min_price = float('inf')
+        # max_profit = 0
+        # for price in prices:
+        #     if price < min_price:
+        #         min_price = price
+        #     elif price - min_price > max_profit:
+        #         max_profit = price - min_price
+                
+        # return max_profit
+        # 3rd approach
         min_price = float('inf')
         max_profit = 0
-        for price in prices:
-            if price < min_price:
-                min_price = price
-            elif price - min_price > max_profit:
-                max_profit = price - min_price
-                
+        n=len(prices)
+        for i in range(0,n):
+            min_price = min(prices[i],min_price)
+            max_profit = max(max_profit,prices[i]-min_price)
         return max_profit

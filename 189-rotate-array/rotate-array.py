@@ -5,10 +5,12 @@ class Solution:
         """
         n=len(nums)
         k = k % n
+        
         # nums[:] = nums[-k:] + nums[:-k]
         # for _ in range(0,k):
         #     e = nums.pop()
         #     nums.insert(0,e)
+        
         # from collections import deque
 
         # d = deque(nums)

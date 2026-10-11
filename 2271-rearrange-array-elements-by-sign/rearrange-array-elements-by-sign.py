@@ -15,20 +15,18 @@
         # return nums
 class Solution:
     def rearrangeArray(self, nums: list[int]) -> list[int]:
-        # Create a result array filled with placeholders
+
         result = [0] * len(nums)
         
-        # Pointers for tracking the next available slot
         pos_idx = 0
         neg_idx = 1
         
         for num in nums:
             if num > 0:
                 result[pos_idx] = num
-                pos_idx += 2  # Move to the next even index
+                pos_idx += 2  
             else:
                 result[neg_idx] = num
-                neg_idx += 2  # Move to the next odd index
-                
+                neg_idx += 2  
         return result
 

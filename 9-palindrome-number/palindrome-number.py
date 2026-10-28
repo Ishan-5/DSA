@@ -7,4 +7,4 @@ class Solution:
         # else:
         #     return False
         q = str(x)
-        return (q == q[::-1] )
+        return (q == q[::-1])

@@ -30,3 +30,4 @@ class Solution:
         if first_row_zero:
             for j in range(n):
                 matrix[0][j] = 0
+        

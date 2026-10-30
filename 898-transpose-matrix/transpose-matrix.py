@@ -9,3 +9,6 @@ class Solution:
         transposed[c][r] = matrix[r][c]
 
     return transposed
+class Solution:
+    def transpose(self, matrix):
+        return [list(row) for row in zip(*matrix)]
